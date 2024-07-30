@@ -33,3 +33,14 @@ Data columns (total 6 columns):
  3   Population (2024)  801 non-null    int64
  4   Population (2023)  801 non-null    int64
  5   Growth Rate        801 non-null    float64
+
+ ```python
+import pandas as pd
+
+# Wczytanie danych
+file_path = r'C:\Users\biklu\Desktop\Projekty python\World population growth\World population growth rate by cities 2024.csv'
+data = pd.read_csv(file_path)
+
+# Wyświetlenie pierwszych kilku wierszy
+print(data.head())
+```
