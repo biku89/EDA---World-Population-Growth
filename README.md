@@ -87,3 +87,48 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/5eacabb0-ea71-440e-a1b5-7d3511e0350d)
 
+```python
+plt.figure(figsize=(10,6))
+sns.barplot(data=data_cleaned, x='Continent', y='Growth Rate')
+plt.title('Average growth rate by continent')
+plt.show()
+```
+![obraz](https://github.com/user-attachments/assets/224164dd-bc22-45df-a95f-737efef360ae)
+
+```python
+Top 10 Countries with Highest Average Growth Rate
+
+average_growth_rate = data_cleaned.groupby('Country')['Growth Rate'].mean().reset_index()
+average_growth_rate_sorted = average_growth_rate.sort_values(by='Growth Rate', ascending=False)
+top_10_countries = average_growth_rate_sorted.head(10)
+
+# Tworzenie wykresu słupkowego
+plt.figure(figsize=(12, 8))
+sns.barplot(data=top_10_countries, x='Growth Rate', y='Country', palette='viridis')
+
+plt.title('Top 10 Countries with Highest Average Growth Rate')
+plt.xlabel('Average Growth Rate')
+plt.ylabel('Country')
+
+plt.show()
+```
+![obraz](https://github.com/user-attachments/assets/950a5238-bf9a-459a-bfd0-3d5c34ce0e28)
+
+```python
+Top 10 Cities with Highest Average Growth Rate
+average_growth_rate_city = data_cleaned.groupby('City')['Growth Rate'].mean().reset_index()
+average_growth_rate_city_sorted = average_growth_rate_city.sort_values(by='Growth Rate', ascending=False)
+
+top_10_cities = average_growth_rate_city_sorted.head(10)
+
+plt.figure(figsize=(12, 8))
+sns.barplot(data=top_10_cities, x='Growth Rate', y='City', hue='City', palette='viridis', dodge=False)
+
+plt.title('Top 10 Cities with Highest Average Growth Rate')
+plt.xlabel('Average Growth Rate')
+plt.ylabel('City')
+plt.show()
+```
+![obraz](https://github.com/user-attachments/assets/9300f73b-1f96-466c-8c36-15b444d57833)
+
+
