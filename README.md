@@ -178,3 +178,5 @@ plt.show()
 
 ![corr_matrix](https://github.com/user-attachments/assets/83156f7a-f474-4c2a-b02c-707a00dbbd14)
 
+Zrób jeszcze 10 miast z najwyższą i najniższą populacją
+
