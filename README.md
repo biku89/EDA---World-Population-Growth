@@ -131,4 +131,50 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/9300f73b-1f96-466c-8c36-15b444d57833)
 
+```python
+average_growth_rate_country = data_cleaned.groupby('Country')['Growth Rate'].mean().reset_index()
+average_growth_rate_country_sorted = average_growth_rate_country.sort_values(by='Growth Rate', ascending=True)
+bottom_10_countries = average_growth_rate_country_sorted.head(10)
+
+
+plt.figure(figsize=(12, 8))
+sns.barplot(data=bottom_10_countries, x='Growth Rate', y='Country', hue='Country', palette='coolwarm', dodge=False)
+
+plt.title('Bottom 10 Countries with Lowest Average Growth Rate')
+plt.xlabel('Average Growth Rate')
+plt.ylabel('Country')
+plt.show()
+```
+![obraz](https://github.com/user-attachments/assets/2526a984-173e-4a3a-ad36-b0b1a6c6f671)
+
+```python
+average_growth_rate_city = data_cleaned.groupby('City')['Growth Rate'].mean().reset_index()
+average_growth_rate_city_sorted = average_growth_rate_city.sort_values(by='Growth Rate', ascending=True)
+bottom_10_cites = average_growth_rate_city_sorted.head(10)
+
+
+plt.figure(figsize=(12, 8))
+sns.barplot(data=bottom_10_cites, x='Growth Rate', y='City', hue='City', palette='coolwarm', dodge=False)
+
+
+plt.title('Bottom 10 Cites with Lowest Average Growth Rate')
+plt.xlabel('Average Growth Rate')
+plt.ylabel('City')
+
+plt.show()
+```
+![obraz](https://github.com/user-attachments/assets/1be14fca-08d0-4722-a454-d6664e2a6e5d)
+
+```python
+coor
+correlation_matrix = data_cleaned[['Population (2024)', 'Population (2023)', 'Growth Rate']].corr()
+print(correlation_matrix)
+
+plt.figure(figsize=(10, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+```
+
+![corr_matrix](https://github.com/user-attachments/assets/83156f7a-f474-4c2a-b02c-707a00dbbd14)
 
