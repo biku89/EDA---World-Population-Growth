@@ -77,6 +77,22 @@ min         7.500360e+05       7.228360e+05    -0.024900
 max         3.711504e+07       3.719410e+07     0.058200
 ```
 ```python
+continent_pop = data_cleaned.groupby('Continent')['Population (2024)'].sum().reset_index()
+
+fig = px.pie(
+    continent_pop,
+    names='Continent',
+    values='Population (2024)',
+    title='Distribution of Continents',
+    labels={'Population (2024)': 'Population'}
+)
+
+fig.show()
+```
+![obraz](https://github.com/user-attachments/assets/572cf675-3a2d-4e5f-8f9c-22670bad18ff)
+
+
+```python
 # Population Growth by Continent
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='Continent', y='Growth Rate', data=data_cleaned)
