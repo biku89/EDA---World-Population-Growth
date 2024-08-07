@@ -1,4 +1,6 @@
-# EDA---World-Population-Growth
+# EDA - World Population Growth
+
+## 1. Importing Libraries and Loading Data
 
 
 ```python
@@ -8,11 +10,11 @@ import matplotlib.pyplot as plt
 import warnings
 import os
 
-# Wczytanie danych
+# Load data
 file_path = r'C:\Users\biklu\Desktop\Projekty python\World population growth\World population growth rate by cities 2024.csv'
 data = pd.read_csv(file_path)
 
-# Wyświetlenie pierwszych kilku wierszy
+# Display first few rows
 print(data.head())
 
         City     Country      Continent  Population (2024)  Population (2023)  Growth Rate
@@ -35,8 +37,9 @@ Data columns (total 6 columns):
  5   Growth Rate        801 non-null    float64
 ```
 ```python
-miss_value = data.isnull().sum()
 
+# Check for missing values
+miss_value = data.isnull().sum()
 print(miss_value)
 
 City                  0
@@ -65,6 +68,8 @@ Number rows before: 801
 Number rows after: 790
 ```
 ```python
+# Descriptive statistics
+
 data.describe()
 Population (2024)  Population (2023)  Growth Rate
 count       8.010000e+02       8.010000e+02   801.000000
