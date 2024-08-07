@@ -157,13 +157,12 @@ plt.show()
 **This bar plot indicates the average population growth rate for each continent. Africa has the highest average growth rate, followed by Asia, which aligns with the trends observed in the box plot.**
 
 ```python
-Top 10 Countries with Highest Average Growth Rate
+-- Top 10 Countries with Highest Average Growth Rate
 
 average_growth_rate = data_cleaned.groupby('Country')['Growth Rate'].mean().reset_index()
 average_growth_rate_sorted = average_growth_rate.sort_values(by='Growth Rate', ascending=False)
 top_10_countries = average_growth_rate_sorted.head(10)
 
-# Tworzenie wykresu słupkowego
 plt.figure(figsize=(12, 8))
 sns.barplot(data=top_10_countries, x='Growth Rate', y='Country', palette='viridis')
 
@@ -178,7 +177,8 @@ plt.show()
 **The bar plot shows the top 10 countries with the highest average population growth rates. These countries, primarily from Africa and Asia, are experiencing significant demographic changes and rapid urbanization.**
 
 ```python
-Top 10 Cities with Highest Average Growth Rate
+-- Top 10 Cities with Highest Average Growth Rate
+
 average_growth_rate_city = data_cleaned.groupby('City')['Growth Rate'].mean().reset_index()
 average_growth_rate_city_sorted = average_growth_rate_city.sort_values(by='Growth Rate', ascending=False)
 
@@ -197,10 +197,11 @@ plt.show()
 **This bar plot highlights the top 10 cities with the highest average population growth rates. These cities are likely experiencing significant urban development and migration.**
 
 ```python
+-- Bottom 10 countries with lowest average growth rate
+
 average_growth_rate_country = data_cleaned.groupby('Country')['Growth Rate'].mean().reset_index()
 average_growth_rate_country_sorted = average_growth_rate_country.sort_values(by='Growth Rate', ascending=True)
 bottom_10_countries = average_growth_rate_country_sorted.head(10)
-
 
 plt.figure(figsize=(12, 8))
 sns.barplot(data=bottom_10_countries, x='Growth Rate', y='Country', hue='Country', palette='coolwarm', dodge=False)
@@ -215,14 +216,14 @@ plt.show()
 **This bar plot shows the bottom 10 countries with the lowest average population growth rates. These countries may be experiencing population decline or very slow growth due to various factors such as economic conditions or emigration.**
 
 ```python
+-- Bottom 10 cities with lowest average growth rate
+
 average_growth_rate_city = data_cleaned.groupby('City')['Growth Rate'].mean().reset_index()
 average_growth_rate_city_sorted = average_growth_rate_city.sort_values(by='Growth Rate', ascending=True)
 bottom_10_cites = average_growth_rate_city_sorted.head(10)
 
-
 plt.figure(figsize=(12, 8))
 sns.barplot(data=bottom_10_cites, x='Growth Rate', y='City', hue='City', palette='coolwarm', dodge=False)
-
 
 plt.title('Bottom 10 Cites with Lowest Average Growth Rate')
 plt.xlabel('Average Growth Rate')
@@ -230,10 +231,12 @@ plt.ylabel('City')
 
 plt.show()
 ```
+**This bar plot shows the bottom 10 cities with the lowest average population growth rates. These cities might be facing challenges such as economic downturns, leading to reduced growth or even population decline.**
+
 ![obraz](https://github.com/user-attachments/assets/1be14fca-08d0-4722-a454-d6664e2a6e5d)
 
 ```python
-coor
+-- Correlation matrix
 correlation_matrix = data_cleaned[['Population (2024)', 'Population (2023)', 'Growth Rate']].corr()
 print(correlation_matrix)
 
@@ -245,5 +248,15 @@ plt.show()
 
 ![corr_matrix](https://github.com/user-attachments/assets/83156f7a-f474-4c2a-b02c-707a00dbbd14)
 
-Zrób jeszcze 10 miast z najwyższą i najniższą populacją
+**The heatmap shows the correlation between population in 2023, population in 2024, and growth rate. There is a strong positive correlation between the populations of 2023 and 2024, indicating steady growth patterns.**
+
+## Conclusion
+
+The analysis reveals several key insights into world population growth:
+
+**1.Population Distribution:** Asia and Africa have the highest populations among the continents, with Asia being the most populous.
+**2.City Distribution:** Countries like China and India have a large number of cities contributing to their urban population.
+**3.Growth Rates:** Africa exhibits higher population growth rates compared to other continents, indicating rapid urbanization and population increase.
+**4.Top and Bottom Growth Rates:** Countries and cities with the highest and lowest growth rates provide insights into regions experiencing significant demographic changes.
+**5.Correlation:** There is a strong correlation between the populations of 2023 and 2024, indicating steady growth patterns.
 
