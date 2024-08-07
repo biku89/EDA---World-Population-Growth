@@ -12,10 +12,12 @@ import warnings
 import os
 
 -- Load data
+
 file_path = r'C:\Users\biklu\Desktop\Projekty python\World population growth\World population growth rate by cities 2024.csv'
 data = pd.read_csv(file_path)
 
 -- Display first few rows
+
 print(data.head())
 
         City     Country      Continent  Population (2024)  Population (2023)  Growth Rate
@@ -40,6 +42,7 @@ Data columns (total 6 columns):
 ```python
 
 -- Check for missing values
+
 miss_value = data.isnull().sum()
 print(miss_value)
 
@@ -137,6 +140,7 @@ for continent in continents:
 
 ```python
 -- Population Growth by Continent
+
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='Continent', y='Growth Rate', data=data_cleaned)
 plt.title('Population Growth by Continent')
@@ -241,6 +245,7 @@ plt.show()
 
 ```python
 -- Correlation matrix
+
 correlation_matrix = data_cleaned[['Population (2024)', 'Population (2023)', 'Growth Rate']].corr()
 print(correlation_matrix)
 
