@@ -11,11 +11,11 @@ import plotly.express as px
 import warnings
 import os
 
-#Load data
+-- Load data
 file_path = r'C:\Users\biklu\Desktop\Projekty python\World population growth\World population growth rate by cities 2024.csv'
 data = pd.read_csv(file_path)
 
-# Display first few rows
+-- Display first few rows
 print(data.head())
 
         City     Country      Continent  Population (2024)  Population (2023)  Growth Rate
@@ -39,7 +39,7 @@ Data columns (total 6 columns):
 ```
 ```python
 
-# Check for missing values
+-- Check for missing values
 miss_value = data.isnull().sum()
 print(miss_value)
 
@@ -69,7 +69,8 @@ Number rows before: 801
 Number rows after: 790
 ```
 ```python
-# Descriptive statistics
+
+-- Descriptive statistics
 
 data.describe()
 Population (2024)  Population (2023)  Growth Rate
@@ -85,7 +86,8 @@ max         3.711504e+07       3.719410e+07     0.058200
 ## 2.Data analysis and visualization
 
 ```python
-# Population distribution by continent
+-- Population distribution by continent
+
 continent_pop = data_cleaned.groupby('Continent')['Population (2024)'].sum().reset_index()
 
 fig = px.pie(
@@ -103,7 +105,8 @@ fig.show()
 **The pie chart shows the distribution of the world population across different continents. Asia has the largest share of the world population, followed by Africa and Europe. This highlights the significant population density in these regions.**
 
 ```python
-Distribution of Country on every continent
+
+--Distribution of Country on every continent
 
 continents = data_cleaned['Continent'].unique()
 
@@ -114,7 +117,6 @@ for continent in continents:
     city_counts.columns = ['Country', 'CityCount']
     sorted_countries = city_counts.sort_values(by='CityCount', ascending=False)['Country']
     
-    Tworzenie wykresu słupkowego z sortowaniem
     plt.figure(figsize=(12, 8))
     sns.countplot(y='Country', data=data_continent, order=sorted_countries, palette='tab20')
     
@@ -134,7 +136,7 @@ for continent in continents:
 **These bar plots illustrate the distribution of cities by country within each continent, highlighting which countries have the most urban areas. For example, in Asia, China and India have the highest number of cities, reflecting their large urban populations.**
 
 ```python
-# Population Growth by Continent
+-- Population Growth by Continent
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='Continent', y='Growth Rate', data=data_cleaned)
 plt.title('Population Growth by Continent')
@@ -147,6 +149,8 @@ plt.show()
 **The box plot shows the distribution of population growth rates across different continents. Africa exhibits higher variability and generally higher growth rates compared to other continents, indicating rapid population growth.**
 
 ```python
+-- Bar plot of average growth rate by continent
+
 plt.figure(figsize=(10,6))
 sns.barplot(data=data_cleaned, x='Continent', y='Growth Rate')
 plt.title('Average growth rate by continent')
