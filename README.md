@@ -11,7 +11,7 @@ import plotly.express as px
 import warnings
 import os
 
-# Load data
+#Load data
 file_path = r'C:\Users\biklu\Desktop\Projekty python\World population growth\World population growth rate by cities 2024.csv'
 data = pd.read_csv(file_path)
 
