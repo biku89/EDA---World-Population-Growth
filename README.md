@@ -91,6 +91,35 @@ fig.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/572cf675-3a2d-4e5f-8f9c-22670bad18ff)
 
+```python
+Distribution of Country on every continent
+
+continents = data_cleaned['Continent'].unique()
+
+for continent in continents:
+    data_continent = data_cleaned[data_cleaned['Continent'] == continent]
+    
+    city_counts = data_continent['Country'].value_counts().reset_index()
+    city_counts.columns = ['Country', 'CityCount']
+    sorted_countries = city_counts.sort_values(by='CityCount', ascending=False)['Country']
+    
+    Tworzenie wykresu słupkowego z sortowaniem
+    plt.figure(figsize=(12, 8))
+    sns.countplot(y='Country', data=data_continent, order=sorted_countries, palette='tab20')
+    
+    plt.title(f'Distribution of Cities by Country in {continent}')
+    plt.xlabel('Number of Cities')
+    plt.ylabel('Country')
+    
+    plt.show()
+```
+![obraz](https://github.com/user-attachments/assets/85eace2f-ec79-4f96-8af9-48ac02bca099)
+![obraz](https://github.com/user-attachments/assets/5d084b56-6edc-4fc0-9eed-00eb96efd212)
+![obraz](https://github.com/user-attachments/assets/bb83983e-593f-40ab-97cc-aa2c4c53eab3)
+![obraz](https://github.com/user-attachments/assets/d0494836-add2-4f1b-bc66-a800d0c3cced)
+![obraz](https://github.com/user-attachments/assets/fc2a91aa-6e23-462d-b7c1-68593385fcdb)
+![obraz](https://github.com/user-attachments/assets/7106d848-c441-4e25-aa99-d200844ddd1c)
+
 
 ```python
 # Population Growth by Continent
