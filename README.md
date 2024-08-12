@@ -120,7 +120,8 @@ fig.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/572cf675-3a2d-4e5f-8f9c-22670bad18ff)
 
-**The pie chart shows the distribution of the world population across different continents. Asia has the largest share of the world population, followed by Africa and Europe. This highlights the significant population density in these regions.**
+**Analysis:**
+The pie chart shows the distribution of the world population across different continents. Asia has the largest share of the world population, followed by Africa and Europe. This highlights the significant population density in these regions.
 
 ```python
 
@@ -151,7 +152,8 @@ for continent in continents:
 ![obraz](https://github.com/user-attachments/assets/fc2a91aa-6e23-462d-b7c1-68593385fcdb)
 ![obraz](https://github.com/user-attachments/assets/7106d848-c441-4e25-aa99-d200844ddd1c)
 
-**These bar plots illustrate the distribution of cities by country within each continent, highlighting which countries have the most urban areas. For example, in Asia, China and India have the highest number of cities, reflecting their large urban populations.**
+**Analysis:**
+These bar plots illustrate the distribution of cities by country within each continent, highlighting which countries have the most urban areas. For example, in Asia, China and India have the highest number of cities, reflecting their large urban populations.
 
 ```python
 -- Population Growth by Continent
@@ -165,7 +167,8 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/5eacabb0-ea71-440e-a1b5-7d3511e0350d)
 
-**The box plot shows the distribution of population growth rates across different continents. Africa exhibits higher variability and generally higher growth rates compared to other continents, indicating rapid population growth.**
+**Analysis:**
+The box plot shows the distribution of population growth rates across different continents. Africa exhibits higher variability and generally higher growth rates compared to other continents, indicating rapid population growth.
 
 ```python
 -- Bar plot of average growth rate by continent
@@ -177,7 +180,8 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/224164dd-bc22-45df-a95f-737efef360ae)
 
-**This bar plot indicates the average population growth rate for each continent. Africa has the highest average growth rate, followed by Asia, which aligns with the trends observed in the box plot.**
+**Analysis:**
+This bar plot indicates the average population growth rate for each continent. Africa has the highest average growth rate, followed by Asia, which aligns with the trends observed in the box plot.
 
 ```python
 -- Top 10 Countries with Highest Average Growth Rate
@@ -197,7 +201,8 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/950a5238-bf9a-459a-bfd0-3d5c34ce0e28)
 
-**The bar plot shows the top 10 countries with the highest average population growth rates. These countries, primarily from Africa and Asia, are experiencing significant demographic changes and rapid urbanization.**
+**Analysis:**
+The bar plot shows the top 10 countries with the highest average population growth rates. These countries, primarily from Africa and Asia, are experiencing significant demographic changes and rapid urbanization.
 
 ```python
 -- Top 10 Cities with Highest Average Growth Rate
@@ -217,7 +222,8 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/9300f73b-1f96-466c-8c36-15b444d57833)
 
-**This bar plot highlights the top 10 cities with the highest average population growth rates. These cities are likely experiencing significant urban development and migration.**
+**Analysis:**
+This bar plot highlights the top 10 cities with the highest average population growth rates. These cities are likely experiencing significant urban development and migration.
 
 ```python
 -- Bottom 10 countries with lowest average growth rate
@@ -236,7 +242,8 @@ plt.show()
 ```
 ![obraz](https://github.com/user-attachments/assets/2526a984-173e-4a3a-ad36-b0b1a6c6f671)
 
-**This bar plot shows the bottom 10 countries with the lowest average population growth rates. These countries may be experiencing population decline or very slow growth due to various factors such as economic conditions or emigration.**
+**Analysis:**
+This bar plot shows the bottom 10 countries with the lowest average population growth rates. These countries may be experiencing population decline or very slow growth due to various factors such as economic conditions or emigration.
 
 ```python
 -- Bottom 10 cities with lowest average growth rate
@@ -254,7 +261,8 @@ plt.ylabel('City')
 
 plt.show()
 ```
-**This bar plot shows the bottom 10 cities with the lowest average population growth rates. These cities might be facing challenges such as economic downturns, leading to reduced growth or even population decline.**
+**Analysis:**
+This bar plot shows the bottom 10 cities with the lowest average population growth rates. These cities might be facing challenges such as economic downturns, leading to reduced growth or even population decline.
 
 ![obraz](https://github.com/user-attachments/assets/1be14fca-08d0-4722-a454-d6664e2a6e5d)
 
@@ -272,7 +280,8 @@ plt.show()
 
 ![corr_matrix](https://github.com/user-attachments/assets/83156f7a-f474-4c2a-b02c-707a00dbbd14)
 
-**The heatmap shows the correlation between population in 2023, population in 2024, and growth rate. There is a strong positive correlation between the populations of 2023 and 2024, indicating steady growth patterns.**
+**Analysis:**
+The heatmap shows the correlation between population in 2023, population in 2024, and growth rate. There is a strong positive correlation between the populations of 2023 and 2024, indicating steady growth patterns.
 
 ## Conclusion
 
