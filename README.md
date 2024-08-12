@@ -1,5 +1,20 @@
 # EDA - World Population Growth
 
+## Introduction
+
+In this project, we conduct an exploratory data analysis (EDA) of global population growth. The analysis is based on data related to the population of cities across different countries and continents, with the aim of understanding key demographic patterns and trends.
+
+The project includes:
+
+1. **Data Import and Initial Analysis:** Loading the dataset, reviewing its structure, identifying missing values, and performing data cleaning.
+
+2. **Descriptive Statistics:** Calculating basic statistics such as mean, median, and standard deviation to understand the distribution of the data.
+
+3. **Data Visualization:** Creating various plots to visualize the population distribution, growth rates, and other key metrics across different regions.
+
+4. **Insights and Conclusions:** Summarizing the key findings from the analysis, including trends in population growth, differences between continents, and identifying regions with the highest and lowest growth rates.
+
+
 ## 1. Importing Libraries and Loading Data
 
 
@@ -263,9 +278,9 @@ plt.show()
 
 The analysis reveals several key insights into world population growth:
 
-**1.Population Distribution:** Asia and Africa have the highest populations among the continents, with Asia being the most populous.
-**2.City Distribution:** Countries like China and India have a large number of cities contributing to their urban population.
-**3.Growth Rates:** Africa exhibits higher population growth rates compared to other continents, indicating rapid urbanization and population increase.
-**4.Top and Bottom Growth Rates:** Countries and cities with the highest and lowest growth rates provide insights into regions experiencing significant demographic changes.
-**5.Correlation:** There is a strong correlation between the populations of 2023 and 2024, indicating steady growth patterns.
+1. **Population Distribution:** Asia and Africa have the highest populations among the continents, with Asia being the most populous.
+2. **City Distribution:** Countries like China and India have a large number of cities contributing to their urban population.
+3. **Growth Rates:** Africa exhibits higher population growth rates compared to other continents, indicating rapid urbanization and population increase.
+4. **Top and Bottom Growth Rates:** Countries and cities with the highest and lowest growth rates provide insights into regions experiencing significant demographic changes.
+5. **Correlation:** There is a strong correlation between the populations of 2023 and 2024, indicating steady growth patterns.
 
